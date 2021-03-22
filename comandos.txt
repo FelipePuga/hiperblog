@@ -1,0 +1,6 @@
+git init --> inicia un repositorio local
+
+git status
+git add hirtoria.txt 
+git rm hirtoria.txt
+git rm --cached hirtoria.txt --> quita el add
