@@ -4,3 +4,12 @@ git status
 git add hirtoria.txt 
 git rm hirtoria.txt
 git rm --cached hirtoria.txt --> quita el add
+
+--Configuracion de git
+git config 
+git config --list -->muestra una lista de la Configuracion
+git config --list --show-origin
+git config --global user.name --> camnbia la configuracion del usuario de GIT
+git config --global user.email --> camnbia la configuracion del correo de GIT
+
+
