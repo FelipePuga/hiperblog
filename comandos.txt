@@ -78,3 +78,9 @@ git reset 9eb5be7c8c75a66751655af59c0dbee7a091e322 --soft --> regresa a la versi
 git reset 9eb5be7c8c75a66751655af59c0dbee7a091e322 --hard --> regresa en el tiempo
 
 git diff --> nos muestra todos los cambios
+
+--ver la primera version
+
+git checkout 9eb5be7c8c75a66751655af59c0dbee7a091e322 hirtoria.txt
+
+git checkout master hirtoria.txt
