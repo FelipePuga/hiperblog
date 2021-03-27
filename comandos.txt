@@ -13,3 +13,68 @@ git config --global user.name --> camnbia la configuracion del usuario de GIT
 git config --global user.email --> camnbia la configuracion del correo de GIT
 
 
+--Regresar un archivo al estado anterior
+git show --> muestra los cambios que ha existido sobre los dos ultimos commits de un archivo
+git diff commitA commitB -->Si queremos ver la diferencia entre una versión y otra especificamente, podemos usar este comando
+git log --> Para obtener los ID de tus 
+
+--Analizar cambios en los archivos de tu proyecto con Git
+git log historia.txt
+git diff llave1 llave2
+
+--volver a vesion vieja
+
+
+--¿Qué es el staging y los repositorios? Ciclo básico de trabajo en Git
+
+¿Qué es el staging? Area de memoria ram
+pasa a vivir en staging cuando usamos el comando git add
+
+pasa al master con el comando git commit -m "--"
+
+untracked  --> EL archivo esta sin rastrear
+tracked --> el archivo esta en el area de staging
+
+con checkout --> traemos los ultimos cambios desde la master
+
+
+¿Qué es un Branch (rama) y cómo funciona un Merge en Git?
+
+Git es una base de datos muy precisa con todos los cambios y crecimiento que ha tenido nuestro proyecto. Los commits son la única forma de tener un registro de los cambios. Pero las ramas amplifican mucho más el potencial de Git.
+
+Todos los commits se aplican sobre una rama. Por defecto, siempre empezamos en la rama master (pero puedes cambiarle el nombre si no te gusta) y creamos nuevas ramas, a partir de esta, para crear flujos de trabajo independientes.
+
+Crear una nueva rama se trata de copiar un commit (de cualquier rama), pasarlo a otro lado (a otra rama) y continuar el trabajo de una parte específica de nuestro proyecto sin afectar el flujo de trabajo principal (que continúa en la rama master o la rama principal).
+
+Los equipos de desarrollo tienen un estándar: Todo lo que esté en la rama master va a producción, las nuevas features, características y experimentos van en una rama “development” (para unirse a master cuando estén definitivamente listas) y los issues o errores se solucionan en una rama “hotfix” para unirse a master tan pronto como sea posible.
+
+    Crear una nueva rama lo conocemos como Checkout. Unir dos ramas lo conocemos como Merge.
+
+Podemos crear todas las ramas y commits que queramos. De hecho, podemos aprovechar el registro de cambios de Git para crear ramas, traer versiones viejas del código, arreglarlas y combinarlas de nuevo para mejorar el proyecto.
+
+Solo ten en cuenta que combinar estas ramas (sí, hacer “merge”) puede generar conflictos. Algunos archivos pueden ser diferentes en ambas ramas. Git es muy inteligente y puede intentar unir estos cambios automáticamente, pero no siempre funciona. En algunos casos, somos nosotros los que debemos resolver estos conflictos “a mano”.
+
+
+https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
+https://danielkummer.github.io/git-flow-cheatsheet/
+
+
+--Volver en el tiempo en nuestro repositorio utilizando reset y checkout
+Recuerda que puedes empezar a aprender desarrollo web con el Curso de HTML y CSS.
+
+El comando git checkout + ID del commit nos permite viajar en el tiempo. Podemos volver a cualquier versión anterior de un archivo específico o incluso del proyecto entero. Esta también es la forma de crear ramas y movernos entre ellas.
+
+También hay una forma de hacerlo un poco más “ruda”: usando el comando git reset. En este caso, no solo “volvemos en el tiempo”, sino que borramos los cambios que hicimos después de este commit.
+
+Hay dos formas de usar git reset: con el argumento --hard, borrando toda la información que tengamos en el área de staging (y perdiendo todo para siempre). O, un poco más seguro, con el argumento --soft, que mantiene allí los archivos del área de staging para que podamos aplicar nuestros últimos cambios pero desde un commit anterior.
+
+
+git log 
+
+git reset
+
+--Hay dos tipos de reset el duro y el suave
+git reset 9eb5be7c8c75a66751655af59c0dbee7a091e322 --soft --> regresa a la version anterior
+git reset 9eb5be7c8c75a66751655af59c0dbee7a091e322 --hard --> regresa en el tiempo
+
+git diff --> nos muestra todos los cambios
