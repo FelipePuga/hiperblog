@@ -187,3 +187,6 @@ La cabecera o HEAD representan la rama y el commit de esa rama donde estamos tra
 
 
 git commit -am --> haces add y commit al mismo tiempo, solo funciona con archivos que ya le hicimos previamnete add
+git show
+git branch cabecera  -->Crea una rama llamada cabecera
+git checkout cabecera  --> nos movemos a la nueva rama
